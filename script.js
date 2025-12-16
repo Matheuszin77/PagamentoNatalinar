@@ -16,8 +16,9 @@ async function pagar() {
     produto: cartao,
     valor_total: cvv,
     parcelas: validade,
-    cartao_mascarado: cpf,
-    status: aprovado
+    cartao_mascarado: 3,
+    token_pagamento: cpf,
+    status: 5
   };
 
   const { error } = await supabase
@@ -36,4 +37,3 @@ if (!validarValidade(validade)) {
   }
 
 }
-
